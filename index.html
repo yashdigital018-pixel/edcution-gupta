@@ -2,22 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Trade With Gautam</title>
 
 <!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+{
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}
+(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init','37388383933939');
 fbq('track','PageView');
@@ -59,8 +67,6 @@ text-align:center;
 overflow:hidden;
 }
 
-/* ONLINE */
-
 .online{
 display:inline-flex;
 align-items:center;
@@ -81,11 +87,8 @@ border-radius:50%;
 background:#25c45a;
 }
 
-/* PHOTO */
-
 .photo-box{
 display:flex;
-flex-direction:column;
 align-items:center;
 justify-content:center;
 margin-bottom:9px;
@@ -97,25 +100,9 @@ height:96px;
 border-radius:50%;
 object-fit:cover;
 display:block;
-border:4px solid #ffffff;
+border:4px solid #fff;
 box-shadow:0 2px 10px rgba(0,0,0,.16);
 }
-
-.change-photo{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-margin-top:7px;
-padding:6px 12px;
-border-radius:20px;
-background:#e9f1ff;
-color:#1467dc;
-font-size:11px;
-font-weight:700;
-cursor:pointer;
-}
-
-/* TITLE */
 
 h1{
 margin:0;
@@ -131,8 +118,6 @@ font-size:14px;
 font-weight:700;
 }
 
-/* RATING */
-
 .stars{
 color:#f5a623;
 font-size:22px;
@@ -147,8 +132,6 @@ font-size:12px;
 font-weight:700;
 }
 
-/* TELEGRAM BUTTON */
-
 .cta{
 display:flex;
 align-items:center;
@@ -157,15 +140,13 @@ width:100%;
 min-height:52px;
 border-radius:13px;
 background:linear-gradient(110deg,#126cf3,#0757d8);
-color:#ffffff;
+color:#fff;
 text-decoration:none;
 font-size:15px;
 font-weight:800;
 margin-bottom:11px;
 box-shadow:0 3px 8px rgba(0,91,220,.16);
 }
-
-/* STATS */
 
 .stats{
 display:grid;
@@ -175,7 +156,7 @@ margin-bottom:11px;
 }
 
 .stat{
-background:#ffffff;
+background:#fff;
 border-radius:11px;
 min-height:58px;
 display:flex;
@@ -197,8 +178,6 @@ font-size:11px;
 font-weight:800;
 }
 
-/* OFFER */
-
 .offer{
 font-size:16px;
 line-height:1.3;
@@ -217,8 +196,6 @@ line-height:1.35;
 margin-bottom:10px;
 }
 
-/* LIMITED */
-
 .limited{
 background:#fff2dc;
 color:#ff8a00;
@@ -229,8 +206,6 @@ font-weight:800;
 margin-bottom:9px;
 }
 
-/* FEATURES */
-
 .features{
 display:flex;
 flex-direction:column;
@@ -239,7 +214,7 @@ margin-bottom:10px;
 }
 
 .feature{
-background:#ffffff;
+background:#fff;
 min-height:47px;
 border-radius:11px;
 display:flex;
@@ -258,8 +233,6 @@ text-align:center;
 font-size:17px;
 flex:none;
 }
-
-/* DISCLAIMER */
 
 .disclaimer{
 color:#aaa;
@@ -293,52 +266,29 @@ text-decoration:none;
 
 <main class="page">
 
-<!-- ONLINE -->
-
 <div class="online">
 <span class="dot"></span>
 5,947 Traders Online Now
 </div>
 
 
-<!-- PHOTO CHANGE -->
-
+<!-- PROFILE PHOTO -->
 <div class="photo-box">
 
 <img
 id="profilePhoto"
 class="profile"
-alt="Profile Photo"
->
-
-<label
-for="photoInput"
-class="change-photo">
-📷 Change Photo
-</label>
-
-<input
-id="photoInput"
-type="file"
-accept="image/*"
-hidden
->
+src="myphoto.jpg"
+alt="Profile Photo">
 
 </div>
 
 
-<!-- TITLE -->
-
-<h1>
-TRADE WITH GAUTAM
-</h1>
+<h1>TRADE WITH GAUTAM</h1>
 
 <div class="subtitle">
 🏆 India's No.1 Stock Market Channel
 </div>
-
-
-<!-- RATING -->
 
 <div class="stars">
 ★★★★★
@@ -349,20 +299,17 @@ TRADE WITH GAUTAM
 </div>
 
 
-<!-- TELEGRAM -->
-
 <a
 class="cta"
 href="https://t.me/+tMHBCmEHZ39hYmJl"
 target="_blank"
 rel="noopener noreferrer"
-onclick="telegramClick()"
->
+onclick="telegramClick()">
+
 Join Free Telegram Channel →
+
 </a>
 
-
-<!-- STATS -->
 
 <div class="stats">
 
@@ -384,27 +331,27 @@ Join Free Telegram Channel →
 </div>
 
 
-<!-- OFFER -->
-
 <div class="offer">
-Get <span class="blue">FREE</span> Daily Calls
-<br>
+
+Get <span class="blue">FREE</span> Daily Calls<br>
 for NIFTY, BANKNIFTY &amp; SENSEX
+
 </div>
+
 
 <div class="small-text">
+
 Join thousands of traders getting daily market analysis
+
 </div>
 
-
-<!-- LIMITED -->
 
 <div class="limited">
+
 🔥 Limited FREE Access Available
+
 </div>
 
-
-<!-- FEATURES -->
 
 <div class="features">
 
@@ -426,25 +373,21 @@ Join thousands of traders getting daily market analysis
 </div>
 
 
-<!-- SECOND TELEGRAM -->
-
 <a
 class="cta"
 href="https://t.me/+tMHBCmEHZ39hYmJl"
 target="_blank"
 rel="noopener noreferrer"
-onclick="telegramClick()"
->
+onclick="telegramClick()">
+
 Join Free Telegram Channel →
+
 </a>
 
 
-<!-- DISCLAIMER -->
-
 <div class="disclaimer">
 
-<b>Disclaimer:</b>
-<br>
+<b>Disclaimer:</b><br>
 
 This channel is for educational purposes only.
 Trading involves market risk.
@@ -456,8 +399,6 @@ Please consult your financial advisor before making investment decisions.
 <div class="line"></div>
 
 
-<!-- ADBUILDAGENCY -->
-
 <div class="powered">
 
 🔥 Powered by
@@ -465,8 +406,10 @@ Please consult your financial advisor before making investment decisions.
 <a
 href="https://t.me/+tMHBCmEHZ39hYmJl"
 target="_blank"
->
+rel="noopener noreferrer">
+
 ADBUILDAGENCY
+
 </a>
 
 </div>
@@ -476,130 +419,23 @@ ADBUILDAGENCY
 
 <script>
 
-/*
-====================================================
-PHOTO CHANGE SYSTEM
-====================================================
-
-Change Photo दबाओ
-↓
-Gallery खुलेगी
-↓
-फोटो select करो
-↓
-फोटो तुरंत बदल जाएगी
-
-और selected photo browser में save भी रहेगी.
-====================================================
+/* PHOTO AUTO REFRESH
+   GitHub में myphoto.jpg बदलते ही
+   नई फोटो लोड करने के लिए cache-busting
 */
 
-const photoInput =
-document.getElementById("photoInput");
+const profilePhoto = document.getElementById("profilePhoto");
 
-const profilePhoto =
-document.getElementById("profilePhoto");
+profilePhoto.src = "myphoto.jpg?v=" + Date.now();
 
 
-/* Page खुलते ही पहले से saved photo लगाओ */
-
-const savedPhoto =
-localStorage.getItem("gautam_profile_photo");
-
-if(savedPhoto){
-
-profilePhoto.src = savedPhoto;
-
-}else{
-
-/*
-पहली बार default photo.
-अगर default photo बदलनी हो तो
-नीचे अपनी image URL डाल सकते हो.
-*/
-
-profilePhoto.src =
-"https://placehold.co/300x300?text=PHOTO";
-
-}
-
-
-/* Gallery से photo select */
-
-photoInput.addEventListener(
-"change",
-function(){
-
-const file =
-this.files[0];
-
-if(!file){
-return;
-}
-
-
-/* केवल image */
-
-if(!file.type.startsWith("image/")){
-
-alert("Please select an image.");
-
-return;
-
-}
-
-
-const reader =
-new FileReader();
-
-
-reader.onload =
-function(event){
-
-const imageData =
-event.target.result;
-
-
-/* तुरंत photo बदलो */
-
-profilePhoto.src =
-imageData;
-
-
-/* Browser में save करो */
-
-try{
-
-localStorage.setItem(
-"gautam_profile_photo",
-imageData
-);
-
-}catch(error){
-
-console.log(
-"Photo storage limit reached."
-);
-
-}
-
-};
-
-
-reader.readAsDataURL(file);
-
-});
-
-
-/* Telegram Pixel Event */
+/* TELEGRAM LEAD TRACKING */
 
 function telegramClick(){
 
 if(typeof fbq === "function"){
 
-fbq(
-"track",
-"Lead"
-);
+fbq("track","Lead");
 
 }
 
